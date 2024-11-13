@@ -1,0 +1,187 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: #333;
+}
+
+/* Container Styling */
+.container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.container h2 {
+  font-size: 2rem;
+  color: #6a11cb;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Form Elements */
+form {
+  margin-top: 2rem;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Input Field */
+form input {
+  border: 2px solid #ddd;
+  font-size: 1.2rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dropdown i {
+  font-size: 2rem;
+  color: #6a11cb;
+  transition: transform 0.3s ease;
+}
+
+.dropdown i:hover {
+  transform: rotate(180deg);
+}
+
+/* Select Container */
+.select-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 2px solid #ddd;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s;
+}
+
+.select-container:hover {
+  border-color: #6a11cb;
+}
+
+.select-container img {
+  max-width: 2.5rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.select-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Message Styling */
+.msg {
+  margin: 2rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #148e0b;
+  background: #e8f5e9;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+
+  animation: pop 0.5s ease-in-out;
+}
+
+/* Button */
+form button {
+  height: 3.5rem;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(120deg, #2575fc, #6a11cb);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 1.5rem;
+  }
+
+  form button {
+      font-size: 1.1rem;
+  }
+
+  .dropdown i {
+      font-size: 1.8rem;
+  }
+
+  .msg {
+      font-size: 1.1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
